@@ -1,25 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import settingsIcon from "./media/settings.png"
+import bestScoreIcon from "./media/bestScore.png"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default function App() {
+	return (
+	<div className="app">
+		<header className='appHeader'>
+			<BestScore score="2000" />
+			<Settings />
+		</header>
+	</div>
+	);
 }
 
-export default App;
+function BestScore({ score }){
+	return(
+		<>
+		<div className='bestScoreDisplay'>
+			<img src={bestScoreIcon} alt='Best Score' className='bestScoreDisplay' />
+			<p className='bestScoreDisplay'>
+				{score}
+			</p>
+		</div>
+		</>
+	);
+}
+
+function Settings(){
+	return(
+		<>
+			<img src={settingsIcon} alt='Settings' className='settingsIcon' />
+		</>
+	);
+}
