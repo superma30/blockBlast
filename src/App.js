@@ -4,13 +4,34 @@ import bestScoreIcon from "./media/bestScore.png"
 
 export default function App() {
 	return (
-	<div className="app">
+	<div className="app flexColumnCenter">
 		<header className='appHeader'>
 			<BestScore score="2000" />
 			<Settings />
 		</header>
 		<CurrentScore score="1000" />
+		<GameBoard />
 	</div>
+	);
+}
+
+function GameBoard(){
+	let table = [[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8],[1,2,3,4,5,6,7,8]];
+	
+	return(
+		<>
+		<table className='gameBoard'>
+			{
+				table.map((list, ridx) => {
+					return(<tr data-row={ridx}>
+						{list.map((item, cidx) => {
+							return(<td data-cell={cidx}>{item}</td>)
+						})}
+					</tr>)
+				})
+			}
+		</table>
+		</>
 	);
 }
 
