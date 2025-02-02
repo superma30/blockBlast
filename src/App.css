@@ -2,6 +2,12 @@
 	text-align: center;
 	background-color: rgb(80, 120, 200);
 	height: 100vh;
+	font-family: "Lexend", "Arial", "Calibri";
+	user-select: none;
+}
+
+.app img{
+	-webkit-user-drag: none;
 }
 
 .appHeader {
@@ -9,22 +15,22 @@
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	font-size: calc(8px + 2vmin);
+	font-size: calc(6px + 3vmin);
 	padding-top: 20px;
 	margin-left: 40px;
 	margin-right: 40px;
 }
 
 .settingsIcon {
-	width: 8vmin;
+	width: 7vmin;
 	margin-right: 40px;
 }
 
 .bestScoreDisplay{
 	color: rgb(231, 211, 64);
 	display: inline;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 2vmin;
+	margin-right: 2vmin;
 }
 
 div.bestScoreDisplay{
@@ -33,6 +39,22 @@ div.bestScoreDisplay{
 }
 
 img.bestScoreDisplay{
-	width: 8vmin;
-	height: 8vmin;
+	width: 7vmin;
+}
+
+.currentScoreDisplay{
+	color: rgb(255, 255, 255);
+	font-size: calc(16px + 3vmin);
+	display: inline;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+/* Lexend Font */
+@font-face {
+	font-display: swap;
+	font-family: 'Lexend';
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
 }

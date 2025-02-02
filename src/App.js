@@ -9,6 +9,7 @@ export default function App() {
 			<BestScore score="2000" />
 			<Settings />
 		</header>
+		<CurrentScore score="1000" />
 	</div>
 	);
 }
@@ -30,6 +31,16 @@ function Settings(){
 	return(
 		<>
 			<img src={settingsIcon} alt='Settings' className='settingsIcon' />
+		</>
+	);
+}
+
+function CurrentScore({ score }){
+	return(
+		<>
+			<p className='currentScoreDisplay'>
+				{score}
+			</p>
 		</>
 	);
 }
