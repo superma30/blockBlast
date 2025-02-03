@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/blockBlast/static/css/main.f7058e2c.css",
+    "main.js": "/blockBlast/static/js/main.b2d7b358.js",
+    "static/js/488.be0ebea0.chunk.js": "/blockBlast/static/js/488.be0ebea0.chunk.js",
+    "static/media/Lexend-VariableFont_wght.ttf": "/blockBlast/static/media/Lexend-VariableFont_wght.a910812ec2ceb829f4e9.ttf",
+    "static/media/settings.png": "/blockBlast/static/media/settings.56a31d586c42cc032a05.png",
+    "index.html": "/blockBlast/index.html",
+    "main.f7058e2c.css.map": "/blockBlast/static/css/main.f7058e2c.css.map",
+    "main.b2d7b358.js.map": "/blockBlast/static/js/main.b2d7b358.js.map",
+    "488.be0ebea0.chunk.js.map": "/blockBlast/static/js/488.be0ebea0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f7058e2c.css",
+    "static/js/main.b2d7b358.js"
+  ]
+}
