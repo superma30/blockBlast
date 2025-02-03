@@ -7,10 +7,17 @@ export default function App() {
 	<div className="app flexColumnCenter">
 		<header className='appHeader'>
 			<BestScore score="2000" />
+			<CurrentScore score="1000" />
 			<Settings />
 		</header>
-		<CurrentScore score="1000" />
-		<GameBoard />
+		<div className='gameBoardAndNewPiecesAligner'>
+			<GameBoard />
+			<div className='newPiecesAligner'>
+				<NewPiece />
+				<NewPiece />
+				<NewPiece />
+			</div>
+		</div>
 	</div>
 	);
 }
@@ -38,7 +45,7 @@ function GameBoard(){
 function BestScore({ score }){
 	return(
 		<>
-		<div className='bestScoreDisplay'>
+		<div className='headerAlignBox'>
 			<img src={bestScoreIcon} alt='Best Score' className='bestScoreDisplay' />
 			<p className='bestScoreDisplay'>
 				{score}
@@ -51,7 +58,9 @@ function BestScore({ score }){
 function Settings(){
 	return(
 		<>
+		<div className='headerAlignBox'>
 			<img src={settingsIcon} alt='Settings' className='settingsIcon' />
+		</div>
 		</>
 	);
 }
@@ -59,9 +68,21 @@ function Settings(){
 function CurrentScore({ score }){
 	return(
 		<>
+		<div className='headerAlignBox'>
 			<p className='currentScoreDisplay'>
 				{score}
 			</p>
+		</div>
+		</>
+	);
+}
+
+function NewPiece({ pieceType }){
+	return(
+		<>
+		<div className='newPieceDisplay'>
+			<img src={bestScoreIcon} />
+		</div>
 		</>
 	);
 }
