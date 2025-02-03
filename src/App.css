@@ -1,4 +1,4 @@
-.app {
+.app{
 	text-align: center;
 	background-color: rgb(80, 120, 200);
 	height: 100vh;
@@ -10,15 +10,35 @@
 	-webkit-user-drag: none;
 }
 
+.flexColumnCenter{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 .appHeader {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 	font-size: calc(6px + 3vmin);
 	padding-top: 20px;
 	margin-left: 40px;
 	margin-right: 40px;
+	width: calc(100% - 80px);
+}
+
+.gameBoard{
+	width: 40vw;
+	height: 40vw;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+.gameBoard td{
+	border: 1px solid black;
+	width: 10px;
+	height: 10px;
 }
 
 .settingsIcon {
@@ -48,7 +68,24 @@ img.bestScoreDisplay{
 	display: inline;
 	margin-left: 20px;
 	margin-right: 20px;
+	align-self: center;
 }
+
+.headerAlignBox{
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.newPieceDisplay{
+	width: calc(10vw - 10px);
+}
+
+.newPieceDisplay img{
+	width: 90%;
+}
+
 
 /* Lexend Font */
 @font-face {
@@ -57,4 +94,56 @@ img.bestScoreDisplay{
 	font-style: normal;
 	font-weight: normal;
 	src: url('fonts/Lexend/Lexend-VariableFont_wght.ttf') format('truetype');
+}
+
+
+@media only screen and (orientation: portrait){
+	.currentScoreDisplay{
+		position: relative;
+		top: 40px;
+	}
+
+	.gameBoard{
+		position: relative;
+		top: 40px;
+		width: 70vw;
+		height: 70vw;
+	}
+
+	.newPiecesAligner{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		position: relative;
+		top: 60px;
+	}
+
+	.gameBoardAndNewPiecesAligner{
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media only screen and (orientation: landscape){
+	.gameBoard{
+		width: 30vw;
+		height: 30vw;
+	}
+
+	.newPiecesAligner{
+		display: flex;
+		flex-direction: column;
+		align-self: center;
+	}
+
+	.gameBoardAndNewPiecesAligner{
+		display: flex;
+		flex-direction: row;
+		justify-items: center;
+	}
+
+	.newPieceDisplay{
+		margin: 20px 0px 20px 50px;
+		width: calc(5vw - 10px);
+	}
 }
